@@ -49,7 +49,10 @@ function yachtclubolbia_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'yachtclubolbia' ),
+			'top-menu' => 'Menu topbar',
+			'main-menu' => 'Menu principale',
+			'footer-menu' => 'Menu pi&eacute; di pagina',
+			'legal-menu' => 'Menu note legali',
 		)
 	);
 
@@ -99,6 +102,22 @@ function yachtclubolbia_setup() {
 			'flex-height' => true,
 		)
 	);
+
+
+		/**
+		 * Add Custom Image Size
+		 */
+
+		 //add_image_size( 'homepage-mainslide', 860, 450, true );
+ 
+ 
+ 
+		 /**
+		  * Disable Gutenberg Widget
+		  */
+		 remove_theme_support( 'widgets-block-editor' );
+
+		 
 }
 add_action( 'after_setup_theme', 'yachtclubolbia_setup' );
 
