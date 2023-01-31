@@ -157,10 +157,18 @@ add_action( 'widgets_init', 'yachtclubolbia_widgets_init' );
  * Enqueue scripts and styles.
  */
 function yachtclubolbia_scripts() {
-	wp_enqueue_style( ' yachtclubolbia-style', get_stylesheet_uri(), array(), YACHTCLUBOLBIA_VERSION );
-	wp_style_add_data( ' yachtclubolbia-style', 'rtl', 'replace' );
 
+	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap', array(), null);
+	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), YACHTCLUBOLBIA_VERSION, 'all');
+	wp_enqueue_style('yachtclubolbia-style', get_stylesheet_uri(), array(), YACHTCLUBOLBIA_VERSION);
+	wp_enqueue_style('theme', get_template_directory_uri() . '/css/style.css', array(), YACHTCLUBOLBIA_VERSION, 'all');
+	wp_style_add_data('yachtclubolbia-style', 'rtl', 'replace');
+	
+	
+	
 	wp_enqueue_script( ' yachtclubolbia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), YACHTCLUBOLBIA_VERSION, true );
+	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), YACHTCLUBOLBIA_VERSION, true);
+	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js"', array(), YACHTCLUBOLBIA_VERSION, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -201,3 +209,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+/**
+ * Bootstrap Breadcrumb.
+ */
+require get_template_directory() . '/inc/class-bootstrap-breadcrumb.php';
+
+/**
+ * Bootstrap Navwalker.
+ */
+require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
