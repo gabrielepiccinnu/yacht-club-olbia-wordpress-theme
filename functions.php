@@ -220,4 +220,3 @@ require get_template_directory() . '/inc/class-bootstrap-breadcrumb.php';
  * Bootstrap Navwalker.
  */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
