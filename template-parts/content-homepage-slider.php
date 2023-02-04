@@ -12,7 +12,17 @@
         <div class="carousel-item<?php if ($i == 0) echo ' active'; ?> ">
           <?php echo wp_get_attachment_image($yco_homepage_slide_image, 'full'); ?>
 
+          <div class="container">
+          <div class="carousel-caption text-start">
+            <span class="h1"><?php the_sub_field('yco_homepage_slide_title'); ?></span>
+            <p><?php the_sub_field('yco_homepage_slide_content'); ?></p>
+            <p><a class="btn btn-lg btn-primary" href="<?php the_sub_field('yco_homepage_slide_link'); ?>"><?php _e('Read more', 'yachtclubolbia'); ?></a></p>
+          </div>
         </div>
+
+        </div>
+
+        
         <?php
 
         $carousel_indicators .= '<button type="button" data-bs-target="#ycoHomeSlider" data-bs-slide-to="' . $i . '" aria-label="Slide ' . $i . '" ';
