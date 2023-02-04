@@ -25,7 +25,7 @@
       <p></p>
     </div>
     <div class="col-md-7">
-      <img src="././img/scuola-vela.jpg" class="img-fluid" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?> /img/scuola-vela.jpg" class="img-fluid" alt="">
 
     </div>
   </div>
