@@ -11,22 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'yachtclubolbia' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'yachtclubolbia' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'yachtclubolbia' ), 'yachtclubolbia', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+ 
+
+
+<footer class="yco-footer-pattern">
+  
+  <div class="container">
+	<p></p>
+  </div>
+  <div class="container">
+	<small class="text-muted">
+		&copy; <?php echo date('Y'); ?> - Yacht Club Olbia Associazione Sportiva Dilettantistica - Tutti i diritti riservati 
+	</small>
+	  
+  </div>
+</footer>
 
 <?php wp_footer(); ?>
 
