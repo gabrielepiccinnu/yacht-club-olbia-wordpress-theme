@@ -34,7 +34,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-	
+
 	<?php wp_head(); ?>
 </head>
 
@@ -43,35 +43,56 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'yachtclubolbia' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$yachtclubolbia_description = get_bloginfo( 'description', 'display' );
-			if ( $yachtclubolbia_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $yachtclubolbia_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header>
+    <nav class="navbar navbar-expand d-none d-lg-flex bg-white">
+      <div class="container">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Scuola di Vela</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Eventi</a>
+          </li>
+        </ul>
+        <a href="#login" class="btn btn-outline-primary btn-yachtclubolbia-icon btn-border-radius-lg">Area soci <i class="yachtclubolbia-icon icon-login"></i></a>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'yachtclubolbia' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-main-yco bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span class="yachtclubolbia-logo"></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Scuola di Vela</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eventi</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Club
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Modulistica</a></li>
+                <li><a class="dropdown-item" href="#">Eventi</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
