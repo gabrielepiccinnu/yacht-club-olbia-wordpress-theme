@@ -43,7 +43,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'yachtclubolbia' ); ?></a>
 
-	<header>
+	<header class="fixed-top">
     <nav class="navbar navbar-expand d-none d-lg-flex bg-white">
       <div class="container">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
