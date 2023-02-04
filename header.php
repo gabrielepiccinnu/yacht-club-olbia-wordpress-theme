@@ -46,14 +46,28 @@
 	<header class="fixed-top">
     <nav class="navbar navbar-expand d-none d-lg-flex bg-white">
       <div class="container">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+	  
+		<?php
+            wp_nav_menu(array(
+                'theme_location' => 'top-menu',
+                'container' => false,
+                'menu_class' => '',
+                'fallback_cb' => '__return_false',
+                'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
+                'depth' => 1,
+                'walker' => new WP_Bootstrap_Navwalker()
+            ));
+            ?>
+
+        <!--ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Scuola di Vela</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Eventi</a>
           </li>
-        </ul>
+        </ul-->
         <a href="#login" class="btn btn-outline-primary btn-yachtclubolbia-icon btn-border-radius-lg">Area soci <i class="yachtclubolbia-icon icon-login"></i></a>
 
 
@@ -68,7 +82,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+		<?php
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu',
+                'container' => false,
+                'menu_class' => '',
+                'fallback_cb' => '__return_false',
+                'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
+                'depth' => 2,
+                'walker' => new WP_Bootstrap_Navwalker()
+            ));
+            ?>
+
+			
+          <!--ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Scuola di Vela</a>
             </li>
@@ -90,7 +118,7 @@
               </ul>
             </li>
 
-          </ul>
+          </ul-->
 
         </div>
       </div>
