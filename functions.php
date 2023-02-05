@@ -226,3 +226,13 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
  * Stats
  */
 require get_template_directory() . '/inc/analytics-stats.php';
+
+
+/**
+ * ACF
+ */
+if (class_exists('ACF')) {
+	require get_template_directory() . '/inc/acf/homepage-settings.php';
+	require get_template_directory() . '/inc/acf/page-settings.php';
+
+}
