@@ -236,3 +236,9 @@ if (class_exists('ACF')) {
 	require get_template_directory() . '/inc/acf/page-settings.php';
 
 }
+
+/**
+ * Admin styles
+ */
+
+ require get_template_directory() . '/inc/admin-styles.php';
