@@ -1,0 +1,15 @@
+.tribe-events .tribe-events-c-search__button {
+    background-color: var(--bs-blue);
+}
+
+.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn {
+    border-radius: 3rem
+}
+
+
+.tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
+    border-radius: 3rem;
+    border: 1px solid var(--bs-blue);
+    color: var(--bs-blue);
+
+}
