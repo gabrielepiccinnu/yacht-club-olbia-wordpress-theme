@@ -13,3 +13,7 @@
     color: var(--bs-blue);
 
 }
+
+.single-tribe_events .tribe-events-c-subscribe-dropdown__button, .tribe-block__events-link .tribe-events-c-subscribe-dropdown__button {
+    width: 280px;
+}
