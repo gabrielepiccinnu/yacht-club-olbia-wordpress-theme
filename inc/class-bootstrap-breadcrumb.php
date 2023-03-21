@@ -53,7 +53,7 @@ function bootstrap_breadcrumb()
     //$html = '<nav aria-label="breadcrumb" class="small text-muted mb-5"><ol class="breadcrumb">'; (custom HTML edits)
     //$html = '<ol class="breadcrumb">';
     //$html = '<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">';
-    $html = '<ol class="breadcrumb mb-0 bg-light" itemscope itemtype="https://schema.org/BreadcrumbList">'; // CTV Theme
+    $html = '<ol class="breadcrumb mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">'; // CTV Theme
     $sep = '';
 
     //$sep = '<i class="las la-angle-right"></i>'; // (Line Awesome Font)
