@@ -18,9 +18,7 @@
     filter: invert(1);
 }
 
-.form-control {
-    border-radius: 0;
-}
+ 
 
 .carousel-indicators [data-bs-target] {
     width: 15px;
