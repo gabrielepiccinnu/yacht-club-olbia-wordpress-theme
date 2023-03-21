@@ -6,14 +6,178 @@
     border-radius: 3rem
 }
 
-
 .tribe-common .tribe-common-c-btn-border, .tribe-common a.tribe-common-c-btn-border {
     border-radius: 3rem;
     border: 1px solid var(--bs-blue);
     color: var(--bs-blue);
-
 }
 
-.single-tribe_events .tribe-events-c-subscribe-dropdown__button, .tribe-block__events-link .tribe-events-c-subscribe-dropdown__button {
-    width: 280px;
+/* Da inserire su Bootstrap */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-yachtclubolbia-icon:hover .yachtclubolbia-icon::after {
+    filter: invert(1);
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 5px;
+}
+
+.bg-yco-light-gradient {
+    background: linear-gradient(180deg, var(--bs-yco-light), transparent);
+}
+
+#ycoHomeSlider .carousel-item {
+    max-height: 90vh;
+}
+
+#ycoHomeSlider {
+    margin-bottom: 3rem;
+}
+
+.wpcf7-spinner {
+    display: none;
+}
+
+.yachtclubolbia-logo {
+    max-height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .yachtclubolbia-logo {
+        max-height: inherit;
+    }
+}
+
+/** TEMP **/
+body.home nav.navbar-top-yco {
+    backdrop-filter: blur(301px);
+    background: linear-gradient(rgb(0 99 172), rgb(0 99 172 / 80%))!important;
+}
+
+body.home nav.navbar-main-yco {
+    backdrop-filter: blur(30px);
+    background: linear-gradient(rgb(255 255 255 / 90%), rgb(255 255 255 / 77%))!important;
+}
+
+.section-title-background-image ol.breadcrumb a, .section-title-background-image ol.breadcrumb {
+    color: #fff;
+    text-decoration: none;
+}
+
+.place-here-contact-info-box {
+    position: relative;
+}
+
+.place-here-contact-info-box::after {
+    content: " ";
+    clear: both;
+    background: url('../img/contact-info-box.svg');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.bg-blur {
+    backdrop-filter: blur(5px);
+}
+
+.bg-card-gradient {
+    background: linear-gradient(180deg, #F3F7F9 0%, rgba(243, 247, 249, 0) 100%);
+}
+
+.yco-static-strip {
+    backdrop-filter: blur(15px);
+    height: 56px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+}
+
+.yco-static-logo {
+    height: 24px;
+    background-image: url('../img/home-yco-static.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+}
+
+#ycoHomeSlider .carousel-caption {
+    bottom: 30%
+}
+
+#ycoHomeSlider .carousel-indicators {
+    bottom: 70px;
+}
+
+.swiper.ycoLastPostsSwiper {
+    overflow: unset;
+}
+
+@media screen and (min-width: 768px) {
+    .yco-static-strip {
+        height: 70px;
+        bottom: 0;
+    }
+
+    .yco-static-logo {
+        height: 70px;
+        background-size: unset;
+        background-position-x: unset;
+    }
+
+    #ycoHomeSlider .carousel-caption {
+        bottom: 30%
+    }
+
+    #ycoHomeSlider .carousel-indicators {
+        bottom: 70px;
+    }
+}
+
+#comments {
+    max-width: 30rem;
+}
+
+#comments.comments-area p.form-submit input#submit {
+    background-color: var(--bs-saily-dark-blue);
+    padding: 0.425rem 0.9rem;
+}
+
+#comments.comments-area p.comment-form-url {
+    display: none;
+}
+
+#comments.comments-area p[class^="comment-form-"] > label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+}
+
+#comments.comments-area p[class^="comment-form-"] > input[type="email"], #comments.comments-area p[class^="comment-form-"] > input[type="text"], #comments.comments-area p[class^="comment-form-"] > textarea {
+    width: 100%;
+    border-radius: 0;
+    outline-width: 0;
+    border: 1px solid #ced4da;
+}
+
+#comments.comments-area p[class^="comment-form-"] > textarea {
+    max-height: 100px
+}
+
+#comments p.comment-form-cookies-consent > label[for="wp-comment-cookies-consent"] {
+    font-size: .8rem;
 }
