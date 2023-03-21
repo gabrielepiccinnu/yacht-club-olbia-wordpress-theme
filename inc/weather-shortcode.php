@@ -23,8 +23,8 @@ function get_yco_weather() {
 
         $weather_data = json_decode(wp_remote_retrieve_body($response), true);
         
-        // Cache the data for 24 hours
-        set_transient($cache_key, $weather_data, 24 * HOUR_IN_SECONDS);
+        // Cache the data for 2 hours
+        set_transient($cache_key, $weather_data, 2 * HOUR_IN_SECONDS);
     }
 
     if (isset($weather_data['weather'][0]['icon'], $weather_data['main']['temp'])) {
