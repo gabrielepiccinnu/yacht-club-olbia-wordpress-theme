@@ -33,6 +33,6 @@ function get_yco_weather() {
 
         return "<span class='me-3 text-white fw-semibold'><img src='" . get_stylesheet_directory_uri() . "/icons/weather/{$icon}.svg' class='me-2' alt='Yacht Club Olbia -  Meteo' width='22' height='22' /> {$temp}°C Olbia</span>";
     } else {
-        return 'Dati meteo N/A.';
+        return "<span class='me-3 text-white fw-semibold'>Dati meteo N/A.</span>";
     }
 }
