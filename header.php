@@ -49,7 +49,7 @@
     <header class="sticky-top">
     <?php endif; ?>
   
-    <nav class="navbar navbar-dark navbar-expand d-none d-lg-flex navbar-top-yco">
+    <nav class="navbar navbar-dark bg-primary navbar-expand d-none d-lg-flex navbar-top-yco">
       <div class="container">
 
 
@@ -93,7 +93,7 @@
       echo ' navbar-dark';
      }else {
       echo ' navbar-light';
-     } ?> navbar-expand-lg navbar-main-yco bg-primary">
+     } ?> navbar-expand-lg navbar-main-yco bg-white">
       <div class="container">
         <a class="navbar-brand" href="<?php echo get_home_url(); ?> "><span class="yachtclubolbia-logo"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
