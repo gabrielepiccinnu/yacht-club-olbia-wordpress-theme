@@ -9,7 +9,7 @@ function get_yco_weather() {
 
     if ($weather_data === false) {
         // Replace YOUR_API_KEY with your OpenWeatherMap API key
-        $api_key = 'ac99c89e55ad9ea4d11143ead257738e';
+        $api_key = YCO_OPENSTREETMAP_API_KEY;
         $city = 'Olbia';
         $cityId = '3172086';
         $country = 'IT';
