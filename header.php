@@ -43,18 +43,31 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'yachtclubolbia' ); ?></a>
 
-	<header class="fixed-top">
-    <nav class="navbar navbar-expand d-none d-lg-flex bg-white">
+	<?php if ( is_front_page() ) : ?>
+    <header class="fixed-top">
+    <?php else : ?>
+    <header class="sticky-top">
+    <?php endif; ?>
+  
+    <nav class="navbar navbar-dark navbar-expand d-none d-lg-flex navbar-top-yco">
       <div class="container">
 
-	  
+
+      <ul class="navbar-nav ms-auto ">
+      <li>
+      <?php echo do_shortcode('[yco_weather]'); ?>
+      </li>
+      </ul>
 		<?php
+
+
+
             wp_nav_menu(array(
                 'theme_location' => 'top-menu',
                 'container' => false,
                 'menu_class' => '',
                 'fallback_cb' => '__return_false',
-                'items_wrap' => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
+                'items_wrap' => '<ul id="%1$s" class="navbar-nav msd-auto mb-2 mb-lg-0 %2$s">%3$s</ul>',
                 'depth' => 1,
                 'walker' => new WP_Bootstrap_Navwalker()
             ));
@@ -68,13 +81,19 @@
             <a class="nav-link" href="#">Eventi</a>
           </li>
         </ul-->
-        <a href="#login" class="btn btn-outline-primary btn-yachtclubolbia-icon btn-border-radius-lg">Area soci <i class="yachtclubolbia-icon icon-login"></i></a>
+        <a href="<?php echo wp_login_url(); ?>" class="btn btn-outline-light btn-yachtclubolbia-icon btn-border-radius-lg">Area soci <i class="yachtclubolbia-icon icon-login"></i></a>
 
 
       </div>
     </nav>
 
-    <nav class="navbar navbar-dark navbar-expand-lg navbar-main-yco bg-primary">
+    <nav class="navbar<?php 
+    
+    if(wp_is_mobile()) {
+      echo ' navbar-dark';
+     }else {
+      echo ' navbar-light';
+     } ?> navbar-expand-lg navbar-main-yco bg-primary">
       <div class="container">
         <a class="navbar-brand" href="<?php echo get_home_url(); ?> "><span class="yachtclubolbia-logo"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
