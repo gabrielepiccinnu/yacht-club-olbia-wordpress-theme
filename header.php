@@ -90,10 +90,10 @@
     <nav class="navbar<?php 
     
     if(wp_is_mobile()) {
-      echo ' navbar-dark';
+      echo ' navbar-dark navbar-main-yco-mobile';
      }else {
-      echo ' navbar-light';
-     } ?> navbar-expand-lg navbar-main-yco bg-white">
+      echo ' navbar-light navbar-main-yco';
+     } ?> navbar-expand-lg  bg-white">
       <div class="container">
         <a class="navbar-brand" href="<?php echo get_home_url(); ?> "><span class="yachtclubolbia-logo"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"

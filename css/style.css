@@ -1,12 +1,7 @@
 /* Da inserire su Bootstrap */
-
 .btn-yachtclubolbia-icon:hover .yachtclubolbia-icon::after {
     filter: invert(1);
 }
-
-
-
-
 
 .bg-yco-light-gradient {
     background: linear-gradient(180deg, var(--bs-yco-light), transparent);
@@ -24,7 +19,6 @@
     display: none;
 }
 
-
 /** TEMP **/
 body.home nav.navbar-top-yco {
     backdrop-filter: blur(301px);
@@ -36,8 +30,12 @@ body.home nav.navbar-main-yco {
     background: linear-gradient(rgb(255 255 255 / 90%), rgb(255 255 255 / 77%)) !important;
 }
 
-.section-title-background-image ol.breadcrumb a,
-.section-title-background-image ol.breadcrumb {
+body.home nav.navbar-main-yco-mobile {
+    backdrop-filter: blur(30px);
+    background: linear-gradient(rgb(0 99 172 / 99%), rgb(0 99 172 / 80%)) !important;
+}
+
+.section-title-background-image ol.breadcrumb a, .section-title-background-image ol.breadcrumb {
     color: #fff;
     text-decoration: none;
 }
