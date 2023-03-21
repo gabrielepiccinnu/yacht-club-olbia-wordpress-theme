@@ -318,8 +318,8 @@ function yachtclubolbia_scripts() {
 
 
 
-	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap', array(), null);
-	wp_enqueue_style('google-fonts-2', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap', array(), null);
+	//wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap', array(), null);
+	//wp_enqueue_style('google-fonts-2', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap', array(), null);
 
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), YACHTCLUBOLBIA_VERSION, 'all');
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/css/swiper-bundle.min.css', array(), YACHTCLUBOLBIA_VERSION, 'all');
