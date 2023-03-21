@@ -24,15 +24,6 @@
     display: none;
 }
 
-.yachtclubolbia-logo {
-    max-height: 40px;
-}
-
-@media screen and (min-width: 768px) {
-    .yachtclubolbia-logo {
-        max-height: inherit;
-    }
-}
 
 /** TEMP **/
 body.home nav.navbar-top-yco {
