@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('container py-5'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -29,9 +29,9 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php yachtclubolbia_post_thumbnail(); ?>
+	<?php //yachtclubolbia_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content py-3">
 		<?php
 		the_content(
 			sprintf(
