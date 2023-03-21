@@ -1,0 +1,14 @@
+{
+    "name": "acf/last-posts-slider",
+    "title": "Posts Slider",
+    "description": "A last posts slider block.",
+    "style": [ "file:./last-posts-slider.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["posts slider", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "last-posts-slider.php"
+    },
+    "align": "full"
+}
